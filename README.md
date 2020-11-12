@@ -1,7 +1,5 @@
-# cyberpunk-countdown-timer
-
-## Cyberpunk 2077 Release Date Countdown
+# Cyberpunk 2077 Release Date Countdown
 
 ![](https://github.com/jkbkupczyk/cyberpunk-countdown-timer/blob/main/img/readme.PNG)
 
-+ https://jkbkupczyk.github.io/portfolio/
++ https://jkbkupczyk.github.io/cyberpunk-countdown-timer/
