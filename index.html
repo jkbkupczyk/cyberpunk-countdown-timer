@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="src/css/style.css">
-        <link rel="shortcut icon" href="favicon.PNG" type="image/png">
-        <title>Cyberpunk Countdown</title>
-    </head>
-    <body>
-        <header>
-            <h1>Cyberpunk Countdown</h1>
-        </header>
 
-        <div id="countdown">
-            <div class="count-elem days-c">
-                <p class="count-text" id="daysElem"></p>
-                <span>days</span>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currency Calculator">
+    <meta name="authors" content="Jakub Kupczyk">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="currency calculator, currency, calculator">
+    <link rel="shortcut icon" href="" type="image/png">
 
-            <div class="count-elem hours-c">
-                <p class="count-text" id="hoursElem"></p>
-                <span>hours</span>
-            </div>
-            
-            <div class="count-elem mins-c">
-                <p class="count-text" id="minutesElem"></p>
-                <span>mins</span>
-            </div>
 
-            <div class="count-elem seconds-c">
-                <p class="count-text" id="secondsElem"></p>
-                <span>seconds</span>
-            </div>
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Currency Calculator</title>
+</head>
+
+<body onload="getData()">
+    <main id="calculator">
+        <h1>Currency Calculator</h1>
+
+        <div id="currency-select">
+            <select name="" id="from" onchange="updateInfo(this)"></select>
+            <input type="text" id="amount-1" class="amount" placeholder="Amount...">
         </div>
 
-        <script src="src/js/app.js"></script>
-    </body>
+        <img src="img/swap.png" width="50px" height="50px" alt="Swap button" onclick="swap()">
+
+        <div id="amount-container">
+            <select name="" id="to" onchange="updateRates()"></select>
+            <input type="text" id="amount-2" class="amount" placeholder="Amount...">
+        </div>
+
+        <div id="details">
+            <div id="currBase" class="info"></div>
+            <div id="validDate" class="info"></div>
+        </div>
+
+        <p id="rate"></p>
+    </main>
+
+    <script src="src/js/app.js"></script>
+</body>
+
 </html>

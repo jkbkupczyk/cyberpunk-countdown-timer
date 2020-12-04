@@ -1,0 +1,119 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+
+@media screen and (max-width: 640px) {
+
+    #currency-select,
+    #amount-container,
+    #details {
+        display: flex;
+        flex-flow: column wrap !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .amount {
+        margin: 1rem 0 !important;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(305deg, #bdd4e7 0%, #8693ab 74%);
+    background-color: #bdd4e7;
+    font-family: "Poppins", sans-serif;
+    color: #111;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+#calculator {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #647492;
+    background-color: white;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+#currency-select {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#amount-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.amount {
+    margin-left: 3.5rem;
+}
+
+img {
+    object-fit: cover;
+    cursor: pointer;
+}
+
+select {
+    width: 14.5rem;
+    height: 3rem;
+    border: 2px solid transparent;
+}
+
+select:hover {
+    border-bottom: 2px solid black;
+}
+
+select,
+input {
+    outline: none;
+}
+
+input {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+input::placeholder {
+    color: #111;
+}
+
+#details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 1rem 2rem;
+}
+
+.info {
+    margin: 0 1.5rem;
+}
+
+span{
+    color: red;
+    font-weight: bold;
+}
