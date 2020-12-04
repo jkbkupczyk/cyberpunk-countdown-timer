@@ -1,119 +1,84 @@
-@import url("https://fonts.google.com/specimen/Poppins");
+@font-face{
+    font-family: Cyberpunk;
+    src: url("./fonts/Cyberpunk.ttf")
+}
 
-@media screen and (max-width: 640px) {
+@font-face{
+    font-family: CountDownDigit;
+    src: url("./fonts/Kill\ The\ Noise.otf");
+}
 
-    #currency-select,
-    #amount-container,
-    #details {
+@media screen and (max-width: 640px){
+    #countdown{
         display: flex;
         flex-flow: column wrap !important;
-        justify-content: center;
+        justify-content: center !important;
         align-items: center;
-        text-align: center;
-    }
-
-    .amount {
-        margin: 1rem 0 !important;
+        margin-top: 5rem !important;
+        margin-bottom: 5rem !important;
     }
 }
 
-* {
-    scroll-behavior: smooth;
+*{
     box-sizing: border-box;
-}
-
-body {
-    background-image: linear-gradient(305deg, #bdd4e7 0%, #8693ab 74%);
-    background-color: #bdd4e7;
-    font-family: "Poppins", sans-serif;
-    color: #111;
-    height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    scroll-behavior: smooth;
     margin: 0 auto;
 }
 
-h1 {
-    margin-bottom: 3rem;
-}
-
-#calculator {
+body{
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("./cyberpunk.png");
+    object-fit: cover;
+    background-position: bottom center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    display: inline-block;
+    font-family: Cyberpunk;
+    font-size: 6rem;
     justify-content: center;
     text-align: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #647492;
-    background-color: white;
+    letter-spacing: 0.5rem;
+    margin-top: 1.1rem;
     overflow: hidden;
-    padding: 2rem;
+    min-width: 650px;
+    word-wrap: break-word;
 }
 
-#currency-select {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-#amount-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-}
-
-.amount {
-    margin-left: 3.5rem;
-}
-
-img {
-    object-fit: cover;
-    cursor: pointer;
-}
-
-select {
-    width: 14.5rem;
-    height: 3rem;
-    border: 2px solid transparent;
-}
-
-select:hover {
-    border-bottom: 2px solid black;
-}
-
-select,
-input {
-    outline: none;
-}
-
-input {
-    background-color: whitesmoke;
-    border-radius: 5px;
-    border: none;
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 1rem;
-}
-
-input::placeholder {
-    color: #111;
-}
-
-#details {
+#countdown{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: 1rem 2rem;
+    margin-top: 14rem;
+    text-align: center;
+    justify-content: center;
 }
 
-.info {
-    margin: 0 1.5rem;
+.count-text{
+    font-family: CountDownDigit;
+    font-size: 7rem;
+    color: #222;
+    line-height: 1;
+    margin: 0 4rem;
 }
 
-span{
-    color: red;
-    font-weight: bold;
+.count-elem{
+    text-align: center;
+    align-items: center;
+}
+
+.count-elem span{
+    font-family: CountDownDigit;
+    font-size: 1.5rem;
+    color: #222;
+    text-align: center;
 }

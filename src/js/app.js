@@ -1,50 +1,38 @@
 // DOM
-const fromSelect = document.querySelector("#from");
-const toSelect = document.querySelector("#to");
-const base = document.querySelector("#currBase");
-const validDate = document.querySelector("#validDate");
-const rate = document.querySelector("#rate");
+const daysElem = document.querySelector("#daysElem");
+const hoursElem = document.querySelector("#hoursElem");
+const minutesElem = document.querySelector("#minutesElem");
+const secondsElem = document.querySelector("#secondsElem");
 
-const URL = "https://api.exchangeratesapi.io/latest?base=";
 
-function getData(currency = "EUR", selectedCurrency) {
-    fetch(URL + currency.toUpperCase())
-        .then(response => response.json())
-        .then(data => {
-            populateInputs(data.rates, selectedCurrency);
-            base.innerHTML = `<strong>Base: </strong>${data.base}`;
-            validDate.innerHTML = `<strong>Date: </strong>${data.date}`;
-            rate.innerHTML = `<strong> 1 ${fromSelect.value} </strong> = <span> ${data.rates[toSelect.value]}</span>`;
-        })
-        .catch(err => console.log(`Error occured: ${err.message}`));
+const release = "10 Dec 2020";
+
+function validate(arg){
+    return arg < 10 ? `0${arg}` : arg;
 }
 
-function populateInputs(data, selectedCurrency) {
-    let fromOption = "";
-    let toOption = "";
+function calcDate(){
+    let releaseDate = new Date(release);
+    let currentDate = new Date();
 
-    for (let currency in data) {
-        if (currency == selectedCurrency) {
-            fromOption += `<option value=${currency} selected>${currency}</option>`;
-        } else {
-            fromOption += `<option value=${currency}>${currency}</option>`;
-        }
-        toOption += `<option value=${currency}>${currency}</option>`;
+    const date = releaseDate - currentDate;
+
+    if(date == 0){
+        clearInterval(count);
     }
 
-    fromSelect.innerHTML = fromOption;
-    toSelect.innerHTML = toOption;
+    const days = Math.floor(date / (1000 * 3600 * 24));
+    const hours = Math.floor(date / (1000 * 3600) % 24);
+    const minutes = Math.floor(date / (1000 * 60) % 60);
+    const seconds = Math.floor(date / 1000 % 60);
+
+    
+    daysElem.innerHTML = days;
+    hoursElem.innerHTML = validate(hours);
+    minutesElem.innerHTML = validate(minutes);
+    secondsElem.innerHTML = validate(seconds);
 }
 
-function updateInfo(elem) {
-    getData(elem.value, elem.value);
-    updateRates(elem.value);
-}
+calcDate();
 
-function updateRates(val) {
-    rate.innerHTML = `<strong> 1 ${fromSelect.value} </strong> = <span> ${val} </span>`;
-}
-
-function swap() {
-
-}
+let count = setInterval(calcDate, 1000);
