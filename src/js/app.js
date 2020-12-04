@@ -17,8 +17,12 @@ function calcDate(){
 
     const date = releaseDate - currentDate;
 
+    if(date == 0){
+        clearInterval(count);
+    }
+
     const days = Math.floor(date / (1000 * 3600 * 24));
-    const hours = Math.floor(date / (1000 * 3600) % 12);
+    const hours = Math.floor(date / (1000 * 3600) % 24);
     const minutes = Math.floor(date / (1000 * 60) % 60);
     const seconds = Math.floor(date / 1000 % 60);
 
@@ -31,4 +35,4 @@ function calcDate(){
 
 calcDate();
 
-setInterval(calcDate, 1000);
+let count = setInterval(calcDate, 1000);
