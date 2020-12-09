@@ -27,10 +27,10 @@ function calcDate(){
     const seconds = Math.floor(date / 1000 % 60);
 
     
-    daysElem.innerHTML = days;
-    hoursElem.innerHTML = validate(hours);
-    minutesElem.innerHTML = validate(minutes);
-    secondsElem.innerHTML = validate(seconds);
+    daysElem.innerHTML = ` ${days} `;
+    hoursElem.innerHTML = ` ${validate(hours + 1)} `;
+    minutesElem.innerHTML = ` ${validate(minutes)} `;
+    secondsElem.innerHTML = ` ${validate(seconds)} `;
 }
 
 calcDate();
