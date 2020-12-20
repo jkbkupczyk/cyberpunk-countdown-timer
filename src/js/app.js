@@ -3,6 +3,7 @@ const daysElem = document.querySelector("#daysElem");
 const hoursElem = document.querySelector("#hoursElem");
 const minutesElem = document.querySelector("#minutesElem");
 const secondsElem = document.querySelector("#secondsElem");
+const countdownElem = document.querySelector("#countdown");
 
 
 const release = "10 Dec 2020";
@@ -17,7 +18,10 @@ function calcDate(){
 
     const date = releaseDate - currentDate;
 
-    if(date == 0){
+    if(date <= 0){
+        const newContent = '<div class="count-text released">RELEASED!</div>';
+        countdownElem.innerHTML = newContent;
+        
         clearInterval(count);
     }
 
@@ -25,7 +29,6 @@ function calcDate(){
     const hours = Math.floor(date / (1000 * 3600) % 24);
     const minutes = Math.floor(date / (1000 * 60) % 60);
     const seconds = Math.floor(date / 1000 % 60);
-
     
     daysElem.innerHTML = ` ${days} `;
     hoursElem.innerHTML = ` ${validate(hours + 1)} `;
