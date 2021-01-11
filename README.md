@@ -8,8 +8,8 @@
 
 Just <a href="https://jkbkupczyk.github.io/cyberpunk-countdown-timer/" target="_blank" rel="noopener noreferrer">visit</a> ❤
 
-### How to get?
-  ####Just type in your cli
+## How to get?
+  ###Just type in your cli
 ```git
   $ git clone https://github.com/jkbkupczyk/github-cards
 ```
