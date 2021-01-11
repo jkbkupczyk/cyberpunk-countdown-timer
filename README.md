@@ -1,7 +1,5 @@
 # Cyberpunk 2077 Release Date Countdown
 
-![](https://github.com/jkbkupczyk/cyberpunk-countdown-timer/blob/main/img/readme.PNG)
-
 <a href="https://jkbkupczyk.github.io/cyberpunk-countdown-timer/" target="_blank" rel="noopener noreferrer">
   <img src="https://github.com/jkbkupczyk/cyberpunk-countdown-timer/blob/main/img/readme.PNG"></img>
 </a>
@@ -17,4 +15,3 @@ Just <a href="https://jkbkupczyk.github.io/cyberpunk-countdown-timer/" target="_
 ```git
   $ git clone https://github.com/jkbkupczyk/github-cards
 ```
-
