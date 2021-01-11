@@ -2,6 +2,10 @@
 
 ![](https://github.com/jkbkupczyk/cyberpunk-countdown-timer/blob/main/img/readme.PNG)
 
+<a href="https://jkbkupczyk.github.io/cyberpunk-countdown-timer/" target="_blank" rel="noopener noreferrer">
+  <img src="https://github.com/jkbkupczyk/cyberpunk-countdown-timer/blob/main/img/readme.PNG"></img>
+</a>
+
 ## Want to visit?
 
 Just <a href="https://jkbkupczyk.github.io/cyberpunk-countdown-timer/" target="_blank" rel="noopener noreferrer">visit</a> ❤
